@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *, ::after, ::before {
   padding: 0;
   margin: 0;
@@ -138,6 +139,8 @@ body {
           animation-fill-mode: backwards;
 }
 
+=======
+>>>>>>> a433f8a (Add all files Sass)
 @-webkit-keyframes BtnToUp {
   0% {
     opacity: 0;
@@ -148,7 +151,10 @@ body {
     transform: translateY(0);
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> a433f8a (Add all files Sass)
 @keyframes BtnToUp {
   0% {
     opacity: 0;
@@ -210,4 +216,150 @@ body {
     opacity: 1;
     transform: translateX(0);
   }
+<<<<<<< HEAD
+=======
+}
+*, ::after, ::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  padding: 5rem;
+  background-color: #fff;
+}
+
+.container {
+  background-color: #f7f7f7;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  color: #777;
+  font-size: 1.6rem;
+  letter-spacing: 0.5rem;
+}
+
+.title-first {
+  color: #fff;
+}
+.title-first__main {
+  display: block;
+  font-weight: 800;
+  font-size: 5rem;
+  line-height: 6rem;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  -webkit-animation-name: leftToRight;
+          animation-name: leftToRight;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+.title-first__secondary {
+  display: block;
+  font-weight: 300;
+  font-size: 4rem;
+  line-height: 4.8rem;
+  letter-spacing: 0.5rem;
+  text-transform: lowercase;
+  -webkit-animation-name: rightToLeft;
+          animation-name: rightToLeft;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  margin-bottom: 6.5rem;
+}
+
+.btn:link, .btn:visited {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #777;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.5rem;
+  background-color: #fff;
+  padding: 1.5rem 4rem;
+  border-radius: 5rem;
+  transition: all 0.2s;
+  position: relative;
+}
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+}
+.btn:hover::after {
+  opacity: 0;
+  transform: scaleX(1.4) scaleY(2);
+}
+.btn:active {
+  transform: translateY(-0.2rem);
+  box-shadow: 0px 0.4rem 0.4rem rgba(0, 0, 0, 0.2);
+}
+.btn::after {
+  content: "";
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  border-radius: 5rem;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.5s;
+  opacity: 0.4;
+}
+.btn_animated {
+  -webkit-animation: BtnToUp 0.7s ease-out 0.4s;
+          animation: BtnToUp 0.7s ease-out 0.4s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+
+.header {
+  position: relative;
+  height: 95vh;
+  background: linear-gradient(90.05deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(0, 0, 0, 0.7) 99.94%), url(../img/pexels-mehmet-turgut-kirkgoz-58656342.jpg) center/cover no-repeat;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 80%);
+          clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 80%);
+}
+.header__logo {
+  position: absolute;
+  top: 5rem;
+  left: 5rem;
+  width: 5.6rem;
+  height: 7rem;
+}
+.header__box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+>>>>>>> a433f8a (Add all files Sass)
 }/*# sourceMappingURL=style.css.map */
