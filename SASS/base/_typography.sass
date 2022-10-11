@@ -2,7 +2,7 @@ body
 	font-family: 'Lato', sans-serif
 	font-weight: 400
 	color: $color-gray
-	font-size: 1.6rem
+	font-size: $font-size-paragraph
 	letter-spacing: 0.5rem
 	
 .title-first
@@ -35,3 +35,31 @@ body
 		backface-visibility: hidden
 		animation-fill-mode: backwards
 		margin-bottom: 6.5rem
+
+.title-secondary
+	font-weight: 800
+	font-size: $font-size-h2
+	line-height: 4.3rem
+	letter-spacing: 1rem
+	text-transform: uppercase
+	background: linear-gradient(90deg, $color-brown-light 3.65%, $color-brown-dark 100%)
+	-webkit-background-clip: text
+	color: transparent
+	transition: all .4s
+	&:hover
+		transform: skewY(2deg) skewX(15deg) scale(1.05)
+		text-shadow: $shadow-h2
+		backface-visibility: hidden
+
+
+.title-third
+	font-weight: 700
+	font-size: $font-size-h3
+	line-height: 2.4rem
+	letter-spacing: .2rem
+	text-transform: uppercase
+
+.paragraph
+	font-size: $font-size-paragraph
+	line-height: 140%
+	letter-spacing: .2rem
