@@ -1,0 +1,96 @@
+.card-tour
+	height: 50rem
+	transition: 1s all
+	perspective: 150rem
+	-moz-perspective: 150rem
+	position: relative
+	
+	
+	&__side
+		height: 50rem
+		transition: all .5s ease-out
+		color: #fff
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		backface-visibility: hidden
+		border-radius: .5rem
+		overflow: hidden
+		&_front
+			background: $color-white
+			box-shadow: $box-shadow
+		&_back
+			background: linear-gradient(120deg, $color-brown-light, $color-brown-dark)
+			transform: rotateY(180deg)
+			box-shadow: $box-shadow
+
+	&:hover &__side_front
+		transform: rotateY(-180deg)
+	&:hover &__side_back
+		transform: rotateY(0deg)
+	&__img
+		background-blend-mode: hard-light
+		height: 21rem
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
+		&_1
+			background: $color-brown-light url(../img/tour-card-1.png) center / cover no-repeat
+		&_2
+			background: $color-brown-light url(../img/tour-card-2.png) center / cover no-repeat
+		&_3
+			background: $color-brown-light url(../img/tour-card-3.png) center / cover no-repeat
+	&__title
+		font-weight: 300
+		font-size: 2.8rem
+		line-height: 3.4rem
+		text-align: right
+		letter-spacing: .2rem
+		text-transform: uppercase
+		position: absolute
+		top: 15rem
+		right: 0rem
+	&__span
+		background: linear-gradient(90deg, $color-brown-light, $color-brown-dark)
+		padding: 1rem 2rem .3rem
+		&_1
+		&_2
+			position: absolute
+			top: 3.3rem
+			right: 0
+			padding-bottom: 1rem
+
+	&__descr
+		ul
+			list-style: none
+			text-align: center
+			li
+				display: inline-block
+				font-weight: 700
+				font-size: $font-size-paragraph
+				line-height: 1.9rem
+				letter-spacing: .2rem
+				color: $color-gray
+				border-bottom: 1px solid $color-gray
+				&:not(:last-child)
+					margin-bottom: 2rem
+	&__backSide-box
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+	&__text
+		color: $color-white
+		margin-bottom: 8rem
+		text-align: center
+		letter-spacing: .2rem
+		&_1
+			font-weight: 300
+			font-size: $font-size-paragraph
+			line-height: 1.9rem
+			
+			text-transform: uppercase
+
+		&_2
+			font-weight: 500
+			font-size: 6rem
+			line-height: 7.2rem
