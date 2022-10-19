@@ -1,7 +1,7 @@
 // Это компонент кнопки
 
 .btn
-	&:link, &:visited
+	&, &:link, &:visited
 		@include style-link
 		font-weight: 600
 		font-size: 2rem
@@ -12,6 +12,9 @@
 		border-radius: 5rem
 		transition: all .2s
 		position: relative
+		border: none
+		box-shadow: $box-shadow
+	
 
 	&:hover
 		transform: translateY(-4px)
@@ -38,4 +41,10 @@
 	&_animated
 		animation: BtnToUp .7s ease-out .4s
 		animation-fill-mode: backwards
+.btn_brown
+		&, &:link, &:visited
+			background-color: $color-brown-light
+			color: $color-white
+		&::after
+			background-color: $color-brown-light
 		
