@@ -1,10 +1,15 @@
 .section-about
 	padding-top: 8.5rem
 	padding-bottom: 14rem
+	@include respond(tab-land)
+		padding-top: 6rem
+		padding-bottom: 10rem
 
 .adventure
 	padding: 21rem 0
 	background: linear-gradient(90.05deg, rgba($color-brown-light, 0.7), rgba($color-black, 0.7)), url(../img/adventure-bcg.png) center/cover no-repeat
+	@include respond(tab-land)
+		padding: 16rem 0
 	
 	// искривляем секцию по оси Y -----------------
 	transform: skewY(7deg)
@@ -16,6 +21,8 @@
 .section-tour
 	padding-top: 21rem
 	margin-bottom: 8rem
+	@include respond(tab-land)
+		padding-top: 15rem
 
 .section-feedBack
 	padding: 8rem 0

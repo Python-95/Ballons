@@ -21,6 +21,8 @@ body
 		animation-timing-function: ease
 		backface-visibility: hidden
 		animation-fill-mode: backwards
+		@include respond(tab-land)
+			font-size: 4rem
 	&__secondary
 		display: block
 		font-weight: 300
@@ -35,6 +37,9 @@ body
 		backface-visibility: hidden
 		animation-fill-mode: backwards
 		margin-bottom: 6.5rem
+		@include respond(tab-land)
+			font-size: 3rem
+			margin-bottom: 4.5rem
 
 .title-secondary
 	font-weight: 800
@@ -46,6 +51,8 @@ body
 	-webkit-background-clip: text
 	color: transparent
 	transition: all .4s
+	@include respond(tab-land)
+			font-size: 3rem
 	&:hover
 		transform: skewY(2deg) skewX(15deg) scale(1.05)
 		text-shadow: $shadow-h2
@@ -62,8 +69,12 @@ body
 	line-height: 2.4rem
 	letter-spacing: .2rem
 	text-transform: uppercase
+	@include respond(tab-land)
+			font-size: 1.8rem
 
 .paragraph
 	font-size: $font-size-paragraph
 	line-height: 140%
 	letter-spacing: .2rem
+	@include respond(tab-land)
+			font-size: 1.5rem

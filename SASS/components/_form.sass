@@ -1,17 +1,22 @@
 .book
     height: 50rem
     background: linear-gradient(115deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.8) 54%, rgba(186,133,80,0.8) 54%, rgba(161,79,3,0.8) 100%), url(../img/bg-form.jpg) center / cover no-repeat
+    @include respond(tab-land)
+        height: 46rem
 
 .form
-    width: 60%
+    width: 70%
     padding-top: 5rem
     padding-left: 5rem
     &__group
         font-size: $font-size-paragraph
         letter-spacing: .2rem
         line-height: 1.9rem
+        
     &__group:not(:last-child)
         margin-bottom: 2rem
+        @include respond(tab-land)
+            margin-bottom: 0
     &__group:nth-child(4)
         margin-bottom: 4rem
         
@@ -24,7 +29,9 @@
         border: none
         border-bottom: .3rem solid transparent
         border-radius: .3rem
-        width: 75%
+        width: 70%
+        @include respond(tab-land)
+            padding: 1rem 0rem 1rem 2rem
         &:focus
             outline: none
             border-bottom: .3rem solid #66d763
@@ -42,8 +49,12 @@
         transform: translateY(-3rem)
 
     &__group-radio
-        width: 40%
         display: inline-block
+        @include respond(tab-land)
+            display: block
+            margin-bottom: 3rem
+        &:not(:last-child)
+            margin-right: 2rem
     &__input-radio
         display: none
 
@@ -51,6 +62,8 @@
         cursor: pointer
         position: relative
         padding-left: 4rem
+        
+            
         
     &__button-radio
         height: 3rem
