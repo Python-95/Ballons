@@ -1,13 +1,24 @@
 .book
     height: 50rem
-    background: linear-gradient(115deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.8) 54%, rgba(186,133,80,0.8) 54%, rgba(161,79,3,0.8) 100%), url(../img/bg-form.jpg) center / cover no-repeat
+    background: linear-gradient(115deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.8) 55%, rgba($color-brown-light,0.1) 55%, rgba($color-brown-light,0.2) 100%), url(../img/bg-form.jpg) center / cover no-repeat
+    // background-blend-mode: hard-light
     @include respond(tab-land)
         height: 46rem
-
+    @include respond(tab-port)
+        height: 52rem
+        background: linear-gradient(100deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.8) 70%, rgba($color-brown-light,0.1) 55%, rgba($color-brown-light,0.2) 100%), url(../img/bg-form.jpg) center / cover no-repeat
+        border-radius: 1rem
+    @include respond(phone)
+        background: linear-gradient(100deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.8) 100%, rgba($color-brown-light,0.1) 55%, rgba($color-brown-light,0.2), url(../img/bg-form.jpg) center / cover no-repeat
 .form
     width: 70%
     padding-top: 5rem
     padding-left: 5rem
+    @include respond(phone)
+        width: 100%
+        padding: 5rem 4rem 1rem
+    
+        
     &__group
         font-size: $font-size-paragraph
         letter-spacing: .2rem
@@ -19,7 +30,9 @@
             margin-bottom: 0
     &__group:nth-child(4)
         margin-bottom: 4rem
-        
+    &__group:last-child
+        @include respond(phone)
+            text-align: center
     &__input
         font-size: $font-size-paragraph
         letter-spacing: .2rem
@@ -30,8 +43,13 @@
         border-bottom: .3rem solid transparent
         border-radius: .3rem
         width: 70%
+        box-shadow: $box-shadow
         @include respond(tab-land)
             padding: 1rem 0rem 1rem 2rem
+        @include respond(tab-port)
+            width: 85%
+        @include respond(phone)
+            width: 100%
         &:focus
             outline: none
             border-bottom: .3rem solid #66d763

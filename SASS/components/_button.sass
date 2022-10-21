@@ -19,6 +19,11 @@
 			padding: 1.2rem 1.5rem
 			line-height: 1.8rem
 			letter-spacing: .3rem
+		@include respond(tab-port)
+			font-size: 2rem
+			padding: 2rem 4rem
+			line-height: 2rem
+			letter-spacing: .4rem
 	
 
 	&:hover
@@ -47,9 +52,11 @@
 		animation: BtnToUp .7s ease-out .4s
 		animation-fill-mode: backwards
 .btn_brown
+		
 		&, &:link, &:visited
 			background-color: $color-brown-light
 			color: $color-white
+			
 		&::after
 			background-color: $color-brown-light
 		

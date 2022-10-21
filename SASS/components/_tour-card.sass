@@ -4,6 +4,9 @@
 	perspective: 150rem
 	-moz-perspective: 150rem
 	position: relative
+	@include respond(tab-port)
+		height: auto
+	
 	
 	&__side
 		height: 50rem
@@ -16,22 +19,42 @@
 		backface-visibility: hidden
 		border-radius: .5rem
 		overflow: hidden
+		@include respond(tab-port)
+			height: auto
+			position: relative
+			
+			
 		&_front
 			background: $color-white
 			box-shadow: $box-shadow
+			padding-bottom: 13rem
 		&_back
 			background: linear-gradient(120deg, $color-brown-light, $color-brown-dark)
 			transform: rotateY(180deg)
 			box-shadow: $box-shadow
+			@include respond(tab-port)
+				transform: rotateY(0deg)
+				clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%)
+				margin-top: -11rem
+				padding-bottom: 6rem
+				height: auto
+				
 
 	&:hover &__side_front
 		transform: rotateY(-180deg)
+		@include respond(tab-port)
+				transform: rotateY(0deg)
 	&:hover &__side_back
 		transform: rotateY(0deg)
+		@include respond(tab-port)
+			margin-top: -11rem
 	&__img
 		background-blend-mode: hard-light
 		height: 21rem
 		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
+		@include respond(tab-port)
+			height: 30rem
+			
 		&_1
 			background: $color-brown-light url(../img/tour-card-1.png) center / cover no-repeat
 		&_2
@@ -48,6 +71,9 @@
 		position: absolute
 		top: 15rem
 		right: 0rem
+		@include respond(tab-port)
+			top: 25rem
+			font-size: 3.8rem
 	&__span
 		background: linear-gradient(90deg, $color-brown-light, $color-brown-dark)
 		padding: 1rem 2rem .3rem
@@ -56,10 +82,17 @@
 			top: 3.3rem
 			right: 0
 			padding-bottom: 1rem
+			@include respond(tab-port)
+				top: 2.2rem
+				position: relative
 	&__descr
+		@include respond(tab-port)
+			width: 35rem
+			margin: 0 auto
 		ul
 			list-style: none
 			text-align: center
+			
 			li
 				display: inline-block
 				font-weight: 700
@@ -70,18 +103,32 @@
 				border-bottom: 1px solid $color-gray
 				@include respond(tab-land)
 					font-size: 1.5rem
+				@include respond(tab-port)
+					font-size: 2rem
+					display: inline-block
 				&:not(:last-child)
 					margin-bottom: 2rem
+					@include respond(tab-port)
+						margin-bottom: 3rem
 	&__backSide-box
 		position: absolute
 		top: 50%
 		left: 50%
 		transform: translate(-50%, -50%)
+		@include respond(tab-port)
+			position: relative
+			top: 0
+			left: 0
+			transform: translate(0, 0)
+			padding-top: 10rem
+			text-align: center
 	&__text
 		color: $color-white
 		margin-bottom: 8rem
 		text-align: center
 		letter-spacing: .2rem
+		@include respond(tab-port)
+			margin-bottom: 5rem
 		&_1
 			font-weight: 300
 			font-size: $font-size-paragraph
