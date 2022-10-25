@@ -4,7 +4,7 @@
 	perspective: 150rem
 	-moz-perspective: 150rem
 	position: relative
-	@include respond(tab-port)
+	@media only screen and (max-width: 900px), (hover: none)
 		height: auto
 	
 	
@@ -19,7 +19,7 @@
 		backface-visibility: hidden
 		border-radius: .5rem
 		overflow: hidden
-		@include respond(tab-port)
+		@media only screen and (max-width: 900px), (hover: none)
 			height: auto
 			position: relative
 			
@@ -32,7 +32,7 @@
 			background: linear-gradient(120deg, $color-brown-light, $color-brown-dark)
 			transform: rotateY(180deg)
 			box-shadow: $box-shadow
-			@include respond(tab-port)
+			@media only screen and (max-width: 900px), (hover: none)
 				transform: rotateY(0deg)
 				clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%)
 				margin-top: -11rem
@@ -52,7 +52,7 @@
 		background-blend-mode: hard-light
 		height: 21rem
 		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
-		@include respond(tab-port)
+		@media only screen and (max-width: 900px), (hover: none)
 			height: 30rem
 			
 		&_1
@@ -71,7 +71,7 @@
 		position: absolute
 		top: 15rem
 		right: 0rem
-		@include respond(tab-port)
+		@media only screen and (max-width: 900px), (hover: none)
 			top: 25rem
 			font-size: 3.8rem
 	&__span
@@ -115,7 +115,7 @@
 		top: 50%
 		left: 50%
 		transform: translate(-50%, -50%)
-		@include respond(tab-port)
+		@media only screen and (max-width: 900px), (hover: none)
 			position: relative
 			top: 0
 			left: 0
@@ -127,8 +127,8 @@
 		margin-bottom: 8rem
 		text-align: center
 		letter-spacing: .2rem
-		@include respond(tab-port)
-			margin-bottom: 5rem
+		@media only screen and (max-width: 900px), (hover: none)
+			margin-bottom: 4rem
 		&_1
 			font-weight: 300
 			font-size: $font-size-paragraph

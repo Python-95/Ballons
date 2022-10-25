@@ -1,7 +1,7 @@
 .book
     height: 50rem
     background: linear-gradient(115deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.8) 55%, rgba($color-brown-light,0.1) 55%, rgba($color-brown-light,0.2) 100%), url(../img/bg-form.jpg) center / cover no-repeat
-    // background-blend-mode: hard-light
+    
     @include respond(tab-land)
         height: 46rem
     @include respond(tab-port)
@@ -9,16 +9,15 @@
         background: linear-gradient(100deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.8) 70%, rgba($color-brown-light,0.1) 55%, rgba($color-brown-light,0.2) 100%), url(../img/bg-form.jpg) center / cover no-repeat
         border-radius: 1rem
     @include respond(phone)
-        background: linear-gradient(100deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.8) 100%, rgba($color-brown-light,0.1) 55%, rgba($color-brown-light,0.2), url(../img/bg-form.jpg) center / cover no-repeat
+        background: linear-gradient(100deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.8) 100%, rgba($color-brown-light,0.1) 55%, rgba($color-brown-light,0.2)), url(../img/bg-form.jpg) center / cover no-repeat
 .form
-    width: 70%
+    width: 85%
     padding-top: 5rem
     padding-left: 5rem
     @include respond(phone)
         width: 100%
         padding: 5rem 4rem 1rem
-    
-        
+      
     &__group
         font-size: $font-size-paragraph
         letter-spacing: .2rem
@@ -33,6 +32,7 @@
     &__group:last-child
         @include respond(phone)
             text-align: center
+       
     &__input
         font-size: $font-size-paragraph
         letter-spacing: .2rem
@@ -42,12 +42,13 @@
         border: none
         border-bottom: .3rem solid transparent
         border-radius: .3rem
-        width: 70%
+        width: 60%
         box-shadow: $box-shadow
         @include respond(tab-land)
             padding: 1rem 0rem 1rem 2rem
+            width: 60%
         @include respond(tab-port)
-            width: 85%
+            width: 80%
         @include respond(phone)
             width: 100%
         &:focus
