@@ -1,0 +1,29 @@
+*, ::after, ::before
+	padding: 0
+	margin: 0
+	box-sizing: border-box
+a, li, ul
+	list-style: none
+	text-decoration: none
+	color: inherit
+html
+	font-size: 62.5%
+	@include respond(tab-land)
+		font-size: 56.25%
+	@include respond(tab-port)
+		font-size: 50%
+	@include respond(phone)
+		font-size: 30%
+	@include respond(big-screen)
+		font-size: 75%
+		
+body
+	padding: 5rem
+	background-color: $color-white
+	@include respond(tab-port)
+		padding: 1rem
+.container
+	background-color: $color-gray-light
+	position: relative
+	z-index: 0
+
